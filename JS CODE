@@ -1,0 +1,24 @@
+var randomNumber1 = Math.floor(Math.random() * 6) +1;
+
+var randomImages = "dice" + randomNumber1 + ".png" ;
+var randomImagesSource = "images/" + randomImages;
+
+document.querySelectorAll("img")[0].setAttribute("src", randomImagesSource);
+
+
+var randomNumber2 = Math.floor(Math.random() * 6)+1;
+
+var randomDiceImage = "dice" + randomNumber2 + ".png" ; 
+var randomDiceSource = "images/" + randomDiceImage;
+
+document.querySelectorAll("img")[1].setAttribute("src", randomDiceSource);
+
+if (randomNumber1>randomNumber2) {
+    document.querySelector("h1").innerHTML = "PLAYER 1 WINSS!!!";
+}
+else if (randomNumber1<randomNumber2) {
+    document.querySelector("h1").innerHTML = "PLAYER 2 WINSS!!!";
+}
+else{
+    document.querySelector("h1").innerHTML  = "DRAWWW!!!";
+}
